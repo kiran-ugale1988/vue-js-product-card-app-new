@@ -3,6 +3,9 @@
         <img :src="product.image" alt="product image" />
         <h3>{{ product.title }}</h3>
         <p>{{ formatPrice(product.price) }}</p>
+        <div>
+            <button @click="notifyParent">Click Me to notifyParent</button>
+        </div>
     </div>
 </template>
 
@@ -15,6 +18,9 @@ export default {
     methods: {
         formatPrice(value) {
         return `${this.$currencySign}${value.toFixed(2)}`;
+    },
+    notifyParent() {
+      this.$emit('customEvent', 'Hello from child notifying to parent');
     }
   }
 };
