@@ -1,11 +1,12 @@
 <template>
     <div id="app">
       <h1>Product Cards Test</h1>
-      <div class="product-container">
+      <div id="parent" class="product-container">
         <ProductCard
           v-for="product in products"
           :key="product.id"
           :product="product"
+          class="child"
         />
       </div>
       <h1>Custom Pipe Test</h1>
@@ -49,6 +50,14 @@
         })
         .catch(error => {
           console.error('Error fetching products:', error);
+        });
+    },
+    mounted() {
+        // Adding the event listener when the component is mounted
+        document.querySelector('#parent').addEventListener('click', function(event) {
+        if (event.target.matches('.child')) {
+            console.log('Child element clicked!');
+        }
         });
     },
     filters: {
