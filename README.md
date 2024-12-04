@@ -49,3 +49,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### Output
+
+<img width="950" alt="image" src="https://github.com/user-attachments/assets/82cc18a5-9a1b-442a-85d9-b21fad4b3b12">
+
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/0ecf5a68-a6ca-4e81-982a-4311463a7c07">
+
